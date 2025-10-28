@@ -3,7 +3,7 @@
     <div class="flex justify-between items-center">
       <!-- Logo -->
       <div class="flex items-center">
-        <h1 class="text-xl font-bold text-gray-900">TK Ceria Belajar</h1>
+        <h1 class="text-xl font-bold text-gray-900">SD Ceria Belajar</h1>
       </div>
 
       <!-- Navigation -->

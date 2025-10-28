@@ -6,7 +6,7 @@
 <!-- ====== NAVBAR ====== -->
 <header class="bg-white border-b border-gray-200 shadow-sm">
   <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-    <h1 class="text-lg font-bold text-gray-900">TK Ceria Belajar</h1>
+    <h1 class="text-lg font-bold text-gray-900">SD Ceria Belajar</h1>
 
     <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
       <a href="{{ route('home') }}" class="text-gray-700 hover:text-blue-600">Beranda</a>

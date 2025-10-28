@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Pendaftar;
 use Illuminate\Support\Facades\Auth;
+use Carbon\Carbon;
 
 class PendaftaranController extends Controller
 {
@@ -24,10 +25,9 @@ class PendaftaranController extends Controller
         }
 
         // 🟢 Gunakan email dari user yang sedang login
-        // (tidak lagi ambil dari input form)
         $email = Auth::check() ? Auth::user()->email : $request->email;
 
-        // Simpan ke database
+        // Simpan data utama pendaftar terlebih dahulu
         $pendaftar = Pendaftar::create([
             'id' => $newId,
             'nama_siswa' => $request->nama,
@@ -48,14 +48,22 @@ class PendaftaranController extends Controller
             'pekerjaan_ibu' => $request->pekerjaan_ibu,
             'penghasilan_ibu' => $request->penghasilan_ibu,
             'telepon' => $request->telepon,
-            'email' => $email, // 🟢 diisi otomatis dari akun login
+            'email' => $email,
             'alamat_orangtua' => $request->alamat_orangtua,
             'jalur' => $request->jalur,
             'kelas' => $request->kelas,
-            'status' => 'Menunggu Review', // 🟢 tambahkan default status
+            'status' => 'Menunggu Review',
         ]);
 
-        // Hapus localStorage (front-end nanti)
+        // 🆕 Tambahkan nomor pendaftaran otomatis
+        $tanggal = Carbon::now()->format('Ymd'); // contoh: 20251028
+        $no_pendaftaran = 'PPDB' . $tanggal . str_pad($pendaftar->id, 4, '0', STR_PAD_LEFT); 
+        // hasil: PPDB202510280001
+
+        // Update field no_pendaftaran setelah data tersimpan
+        $pendaftar->update(['no_pendaftaran' => $no_pendaftaran]);
+
+        // Kirim ke view bukti pendaftaran
         return view('user.bukti', compact('pendaftar'));
     }
 }

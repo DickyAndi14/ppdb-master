@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'TK Ceria Belajar')
+@section('title', 'SD Ceria Belajar')
 
 @section('content')
 
@@ -10,7 +10,7 @@
             <div class="flex justify-between items-center">
                 <!-- Logo -->
                 <div class="flex items-center">
-                    <h1 class="text-xl font-bold text-gray-900">TK Ceria Belajar</h1>
+                    <h1 class="text-xl font-bold text-gray-900">SD Ceria Belajar</h1>
                 </div>
 
                 <!-- Navigation Menu -->
@@ -74,7 +74,7 @@
                         </h3>
 
                         <p class="text-gray-600 text-lg leading-relaxed mb-8">
-                            TK Ceria Belajar adalah tempat di mana anak-anak berkembang dengan gembira melalui pembelajaran
+                            SD Ceria Belajar adalah tempat di mana anak-anak berkembang dengan gembira melalui pembelajaran
                             yang kreatif, inovatif, dan penuh kasih sayang.
                         </p>
                     </div>
@@ -223,7 +223,7 @@
                 <div>
                     <h3 class="text-2xl font-semibold text-gray-900 mb-4">Sejarah Kami</h3>
                     <p class="text-gray-600 leading-relaxed">
-                        TK Ceria Belajar didirikan pada tahun 2010 dengan visi menciptakan lingkungan pembelajaran yang
+                        SD Ceria Belajar didirikan pada tahun 2010 dengan visi menciptakan lingkungan pembelajaran yang
                         menyenangkan dan mendukung perkembangan optimal anak usia dini.
                     </p>
                     <p class="text-gray-600 mt-4 leading-relaxed">
@@ -566,7 +566,7 @@
             <div class="text-center mb-8 md:mb-12">
                 <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-900 mb-3">Galeri Kegiatan</h2>
                 <p class="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
-                    Dokumentasi momen berharga anak-anak di TK Ceria Belajar
+                    Dokumentasi momen berharga anak-anak di SD Ceria Belajar
                 </p>
             </div>
 

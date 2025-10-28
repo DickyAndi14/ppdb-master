@@ -6,7 +6,7 @@
 <!-- ====== NAVBAR ====== -->
 <header class="bg-white border-b border-gray-200 shadow-sm">
   <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-    <h1 class="text-lg font-bold text-gray-900">TK Ceria Belajar</h1>
+    <h1 class="text-lg font-bold text-gray-900">SD Ceria Belajar</h1>
     <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
       <a href="{{ route('home') }}" class="text-gray-700 hover:text-blue-600">Beranda</a>
       <a href="#" class="text-gray-700 hover:text-blue-600">Profil</a>
@@ -71,8 +71,8 @@
           <select name="kelas_select" id="kelas_select"
                   class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:ring-blue-500 focus:border-blue-500">
             <option value="">Pilih kelas yang dituju</option>
-            <option value="TK A">TK A</option>
-            <option value="TK B">TK B</option>
+            <option value="TK A">SD A</option>
+            <option value="TK B">SD B</option>
           </select>
         </div>
 
@@ -164,10 +164,23 @@
           ];
 
           fields.forEach(field => {
-            document.getElementById('hidden_' + field).value =
-              localStorage.getItem('calon_' + field) ||
-              localStorage.getItem('orangtua_' + field) || '';
-          });
+          const calonData = localStorage.getItem('calon_' + field);
+          const ortuData = localStorage.getItem('orangtua_' + field);
+        const hiddenInput = document.getElementById('hidden_' + field);
+
+  // Pastikan hidden input selalu ada
+  if (!hiddenInput) return;
+
+  // Prioritas data orang tua untuk kontak
+  if (['telepon','email','alamat_orangtua'].includes(field)) {
+    hiddenInput.value = ortuData?.trim() || calonData?.trim() || '';
+  } else {
+    hiddenInput.value = calonData?.trim() || ortuData?.trim() || '';
+  }
+
+  // Debug log (hapus nanti)
+  console.log(`${field}:`, hiddenInput.value);
+});
 
           document.getElementById('hidden_jalur').value = localStorage.getItem('jalur_pilihan') || '';
           document.getElementById('hidden_kelas').value = localStorage.getItem('jalur_kelas') || '';

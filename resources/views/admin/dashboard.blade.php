@@ -10,8 +10,8 @@
     <div>
       {{-- Logo --}}
       <div class="flex items-center gap-2 px-6 py-4 border-b border-gray-200">
-        <div class="w-8 h-8 bg-blue-600 text-white rounded-lg grid place-items-center font-bold">TK</div>
-        <h1 class="text-gray-900 font-semibold">TK Ceria</h1>
+        <div class="w-8 h-8 bg-blue-600 text-white rounded-lg grid place-items-center font-bold">SD</div>
+        <h1 class="text-gray-900 font-semibold">SD Ceria</h1>
       </div>
 
       {{-- Menu --}}
@@ -60,7 +60,7 @@
   <main class="flex-1 p-6 md:p-8">
     <div class="mb-6">
       <h1 class="text-2xl md:text-3xl font-bold text-gray-900">Dashboard Admin</h1>
-      <p class="text-gray-500">TK Ceria</p>
+      <p class="text-gray-500">SD Ceria</p>
     </div>
 
     {{-- STATISTIK --}}
@@ -105,6 +105,7 @@
               <th class="px-6 py-3">Nama Siswa</th>
               <th class="px-6 py-3">Orang Tua</th>
               <th class="px-6 py-3">Kelas</th>
+              <th class="px-6 py-3">Jalur</th>
               <th class="px-6 py-3">Status</th>
             </tr>
           </thead>
@@ -115,6 +116,24 @@
                 <td class="px-6 py-4">{{ $p->nama_siswa }}</td>
                 <td class="px-6 py-4">{{ $p->nama_ayah ?? '-' }}</td>
                 <td class="px-6 py-4">{{ $p->kelas ?? '-' }}</td>
+
+                {{-- 🌈 Jalur dengan warna unik (mint green untuk afirmasi) --}}
+                <td class="px-6 py-4">
+                  @php
+                    $jalur = strtolower($p->jalur);
+                    $badgeClass = match($jalur) {
+                      'reguler' => 'bg-blue-100 text-blue-700',
+                      'prestasi' => 'bg-purple-100 text-purple-700',
+                      'afirmasi' => 'bg-emerald-50 text-emerald-700', // lebih lembut, beda dari hijau status
+                      default => 'bg-gray-100 text-gray-600',
+                    };
+                  @endphp
+                  <span class="px-2.5 py-1 rounded-full text-xs font-medium {{ $badgeClass }}">
+                    {{ $p->jalur ?? '-' }}
+                  </span>
+                </td>
+
+                {{-- Status --}}
                 <td class="px-6 py-4">
                   <span class="px-2.5 py-1 rounded-full text-xs 
                     {{ $p->status == 'Diterima' ? 'bg-green-100 text-green-700' :
@@ -125,7 +144,7 @@
               </tr>
             @empty
               <tr>
-                <td colspan="5" class="px-6 py-12 text-center text-gray-400">
+                <td colspan="6" class="px-6 py-12 text-center text-gray-400">
                   Belum ada data pendaftaran
                 </td>
               </tr>

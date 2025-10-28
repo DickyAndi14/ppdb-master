@@ -67,10 +67,6 @@
     </p>
 
     <!-- Demo Account -->
-    <div class="mt-6 bg-blue-50 text-gray-700 rounded-2xl p-4 text-left">
-      <p class="font-semibold">Demo Account:</p>
-      <p class="text-sm">Admin: admin@tkceria.com / admin123</p>
-    </div>
   </div>
 </section>
 @endsection
