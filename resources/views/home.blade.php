@@ -699,7 +699,7 @@
                         </div>
                     </div>
                     <p class="text-gray-600 italic">
-                        "Anak saya sangat senang belajar di TK Ceria Belajar. Guru-gurunya sabar dan metode pembelajaran
+                        "Anak saya sangat senang belajar di SD Ceria Belajar. Guru-gurunya sabar dan metode pembelajaran
                         sangat kreatif. Zahra sekarang lebih percaya diri dan mandiri!"
                     </p>
                 </div>
@@ -740,8 +740,8 @@
                         </div>
                     </div>
                     <p class="text-gray-600 italic">
-                        "TK terbaik! Keisha yang tadinya pemalu sekarang jadi aktif dan suka bercerita tentang kegiatan di
-                        sekolah. Terima kasih TK Ceria Belajar!"
+                        "SD terbaik! Keisha yang tadinya pemalu sekarang jadi aktif dan suka bercerita tentang kegiatan di
+                        sekolah. Terima kasih SD Ceria Belajar!"
                     </p>
                 </div>
 
@@ -902,7 +902,7 @@
                             </div>
                             <h3 class="font-bold text-gray-900 text-lg mb-3">Email</h3>
                             <p class="text-gray-600 leading-relaxed">
-                                info@tkcerabelajar.sch.id
+                                info@sdceriabelajar.sch.id
                             </p>
                         </div>
                     </div>
@@ -972,7 +972,7 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <!-- About -->
                 <div>
-                    <h3 class="text-xl font-bold mb-4">TK Ceria Belajar</h3>
+                    <h3 class="text-xl font-bold mb-4">SD Ceria Belajar</h3>
                     <p class="text-gray-300 mb-4">
                         Mendidik generasi cerdas dan berakhlak mulia sejak usia dini. Berdiri sejak 2010.
                     </p>
@@ -1033,7 +1033,7 @@
                                 </svg>
                             </div>
                             <div>
-                                <p>info@tkcerabelajar.sch.id</p>
+                                <p>info@sdceriabelajar.sch.id</p>
                             </div>
                         </div>
                     </div>
@@ -1085,9 +1085,8 @@
                     </div>
                 </div>
             </div>
-
             <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2025 TK Ceria Belajar. Dibuat dengan ❤️ untuk anak-anak Indonesia.</p>
+                <p>&copy; 2025 SD Ceria Belajar. Dibuat dengan ❤️ untuk anak-anak Indonesia.</p>
             </div>
         </div>
     </footer>

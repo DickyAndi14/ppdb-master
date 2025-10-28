@@ -10,7 +10,7 @@
     <div>
       <div class="flex items-center gap-2 px-6 py-4 border-b border-gray-200">
         <div class="w-8 h-8 bg-blue-600 text-white rounded-lg grid place-items-center font-bold">TK</div>
-        <h1 class="text-gray-900 font-semibold">TK Ceria</h1>
+        <h1 class="text-gray-900 font-semibold">SD Ceria</h1>
       </div>
 
       <nav class="p-4 space-y-1 text-gray-700">
@@ -113,11 +113,10 @@
             <td class="px-6 py-4 text-center">
               {{-- Tombol Info --}}
               <button 
-                onclick="openModal({{ $p->id }})"
-                class="px-3 py-1 bg-blue-500 text-white text-xs rounded hover:bg-blue-600">
-                Info
-              </button>
-
+              onclick='openModal({{ $p->id }})'
+              class="px-3 py-1 bg-blue-500 text-white text-xs rounded hover:bg-blue-600">
+              Info
+            </button>            
               {{-- Tombol Terima --}}
               <form action="{{ route('admin.updateStatus', $p->id) }}" method="POST" class="inline-block ml-2">
                 @csrf
